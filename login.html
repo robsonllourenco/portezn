@@ -8,18 +8,46 @@
 </head>
 <body>
   <div class="login-container">
-    <h2>Login - Zona Norte</h2>
+    <h1>Login</h1>
     <form id="login-form">
       <label for="username">Usuário:</label>
-      <input type="text" id="username" placeholder="Digite seu usuário" required>
-      
+      <input type="text" id="username" name="username" required>
       <label for="password">Senha:</label>
-      <input type="password" id="password" placeholder="Digite sua senha" required>
-      
+      <input type="password" id="password" name="password" required>
       <button type="submit">Entrar</button>
-      <p id="error-message"></p>
     </form>
+    <p id="error-message" style="color: red;"></p>
   </div>
-  <script src="login.js"></script>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async function (e) {
+      e.preventDefault(); // Impede o comportamento padrão do formulário
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        // Carregar os dados do JSON
+        const response = await fetch('users.json');
+        const users = await response.json();
+
+        // Verificar se as credenciais são válidas
+        const user = users.find((user) => user.username === username && user.password === password);
+
+        if (user) {
+          // Salvar o estado de login no sessionStorage
+          sessionStorage.setItem('loggedIn', 'true');
+
+          // Redirecionar para a página index.html
+          window.location.href = 'index.html';
+        } else {
+          document.getElementById('error-message').textContent = 'Usuário ou senha inválidos.';
+        }
+      } catch (error) {
+        console.error('Erro ao carregar os dados de usuários:', error);
+        document.getElementById('error-message').textContent = 'Erro ao processar o login. Tente novamente mais tarde.';
+      }
+    });
+  </script>
 </body>
 </html>
