@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emissão de Porte de Arma</title>
-  <!-- Favicon -->
+
   <link rel="icon" type="./logodireita.png" href="./logodireita.png">
   <link rel="stylesheet" href="styles.css">
   <script>
-    // Verificar se o usuário está autenticado
+
     if (!sessionStorage.getItem('loggedIn')) {
-      // Redirecionar para a página de login se não autenticado
+
       window.location.href = 'login.html';
     }
   </script>
 </head>
 <body>
-<!-- Cabeçalho -->
+
 <header>
   <div class="header-container">
     <img src="./logoesquerda.png" alt="Logo Esquerda" class="logo logo-left">
@@ -28,7 +28,7 @@
   </div>
 </header>
 
-<!-- Aviso em vermelho -->
+
 <div class="warning">
   <span class="warning-icon">⚠️</span>
   <p class="warning-text">
@@ -38,13 +38,13 @@
 
 
 
-<!-- Título principal -->
+
 <main>
   <div class="form-title">
     <h3>Registro para Emissão de Porte de Arma</h3>
   </div>
   <main>
-    <!-- Abas de Navegação -->
+
     <nav class="tabs">
       <button class="tab active" onclick="showSection('section-portador')">Dados do Portador</button>
       <button class="tab" onclick="showSection('section-documento')">Dados do Documento</button>
@@ -52,14 +52,14 @@
       <button class="tab" onclick="showSection('section-validade')">Dados da Validade</button>
     </nav>
 
-    <!-- Conteúdo Principal em Duas Colunas -->
+
     <div class="content">
-      <!-- Canvas para o Documento -->
+
       <div class="canvas-container">
         <canvas id="outputCanvas" width="600" height="400"></canvas>
       </div>
 
-      <!-- Formulário -->
+
       <div class="form-container">
         <div class="section active" id="section-portador">
           <h2>Dados do Portador</h2>
@@ -118,7 +118,7 @@
     </div>
     
 
-    <!-- Botão de Baixar -->
+
 <div class="download-container">
   <button onclick="downloadImage()">Baixar</button>
 </div>
