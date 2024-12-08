@@ -1,0 +1,326 @@
+/* Reset */
+body, h1, h2, label, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #003366;
+  padding: 20px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.header-text {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.header-text h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.header-text h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: white;
+}
+
+
+/* Ajuste do body para compensar o cabeçalho fixo */
+body {
+  margin: 0;
+  padding-top: 100px; /* Espaço ajustado para o cabeçalho fixo */
+}
+
+.warning {
+  margin-top: 0px; /* Espaço personalizado abaixo do cabeçalho */
+}
+
+
+/* Aviso em vermelho */
+.warning {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  margin: 30px auto;
+  text-align: left; /* Alinhado à esquerda para parecer mais interativo */
+  border-radius: 8px;
+  display: flex; /* Adiciona layout flexível */
+  align-items: center; /* Centraliza conteúdo verticalmente */
+  gap: 10px; /* Espaçamento entre ícone e texto */
+  max-width: 100%; /* Limita a largura para centralizar melhor */
+  animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
+}
+
+.warning-icon {
+  font-size: 1.5rem; /* Tamanho do ícone */
+  color: #721c24;
+}
+
+.warning-text {
+  font-size: 0.95rem; /* Ajuste do tamanho do texto */
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Título Principal */
+.form-title {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-bottom: 10px;
+  background-color: #0056b3; /* Fundo azul */
+  color: white; /* Texto branco */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas levemente arredondadas */
+  width: 1000px; /* Ocupa toda a largura */
+}
+
+.form-title h3 {
+  font-size: 1.2rem; /* Ajusta o tamanho do texto */
+  font-weight: bold; /* Negrito */
+  margin: 0; /* Remove margem do título */
+  padding-left: 15px; /* Espaçamento interno para alinhamento */
+}
+
+/* Abas de Navegação */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: #e9ecef;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%; /* Ocupa toda a largura */
+}
+
+.tab.active {
+  background-color: white;
+  color: #007BFF;
+  border-bottom: 3px solid #007BFF;
+}
+
+.tab:hover {
+  background-color: #dbe2e8;
+}
+
+/* Layout de 2 Colunas */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.canvas-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+#outputCanvas {
+  border: 3px solid #007BFF;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+}
+
+.form-container {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Grid para Dados do Documento */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Botão de Baixar */
+.download-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.download-container button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.download-container button:hover {
+  background-color: #0056b3;
+}
+
+.developer-text {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin-top: 25px; /* Espaçamento acima da frase */
+  font-size: 0.8rem; /* Ajusta o tamanho do texto */
+  color: #525252; /* Cor do texto */
+}
+
+/* Tela de Login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f6f9;
+}
+
+.login-container h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+#login-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+#login-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#login-form button:hover {
+  background-color: #0056b3;
+}
+
+#error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .canvas-container, .form-container {
+    min-width: 100%;
+  }
+}
