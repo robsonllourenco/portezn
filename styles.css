@@ -255,54 +255,85 @@ input[type="text"], select {
   justify-content: center;
   height: 100vh;
   background-color: #f4f6f9;
+  padding: 20px; /* Adiciona espaçamento interno */
 }
 
 .login-container h2 {
   color: #003366;
   margin-bottom: 20px;
+  font-size: 1.5rem; /* Aumenta o tamanho do título */
+  text-align: center;
+}
+
+/* Logo */
+.logo-login {
+  height: 120px; /* Aumenta o tamanho da logo */
+  width: auto; /* Mantém a proporção */
+  margin-bottom: 30px; /* Espaçamento abaixo da logo */
 }
 
 #login-form {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  padding: 30px; /* Aumenta o espaçamento interno */
+  border-radius: 10px; /* Arredonda mais as bordas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta o sombreado */
+  width: 350px; /* Aumenta a largura do formulário */
 }
 
 #login-form label {
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
+  font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+  color: #333; /* Ajusta a cor do texto */
 }
 
 #login-form input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 12px; /* Aumenta o padding dos inputs */
+  margin-bottom: 20px; /* Aumenta o espaçamento entre os campos */
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px; /* Mais arredondado */
+  font-size: 0.9rem; /* Ajusta o tamanho do texto */
 }
 
 #login-form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Aumenta o tamanho do botão */
   background-color: #007BFF;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px; /* Mais arredondado */
   cursor: pointer;
+  font-size: 1rem; /* Aumenta o tamanho do texto */
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out; /* Animação suave */
 }
 
 #login-form button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cor mais escura no hover */
 }
 
 #error-message {
   color: red;
   text-align: center;
   margin-top: 10px;
+  font-size: 0.85rem; /* Ajusta o tamanho do texto */
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #login-form {
+    width: 100%; /* Ocupa toda a largura em telas menores */
+    max-width: 400px; /* Limita a largura máxima */
+  }
+
+  .logo-login {
+    height: 100px; /* Reduz o tamanho da logo em telas menores */
+    margin-bottom: 20px; /* Ajusta o espaçamento */
+  }
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
