@@ -8,7 +8,9 @@
 </head>
 <body>
   <div class="login-container">
+    <!-- Logo -->
     <img src="./logodireita.png" alt="Logo Login" class="logo-login">
+    <!-- Formulário de Login -->
     <form id="login-form">
       <label for="username">Usuário:</label>
       <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
@@ -16,13 +18,13 @@
       <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
       <button type="submit">Entrar</button>
     </form>
-    <p id="error-message" style="color: red;"></p>
+    <!-- Mensagem de Erro -->
+    <p id="error-message"></p>
   </div>
 
   <script>
     document.getElementById('login-form').addEventListener('submit', async function (e) {
       e.preventDefault();
-
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
@@ -39,7 +41,6 @@
           document.getElementById('error-message').textContent = 'Usuário ou senha inválidos.';
         }
       } catch (error) {
-        console.error('Erro ao carregar os dados de usuários:', error);
         document.getElementById('error-message').textContent = 'Erro ao processar o login. Tente novamente mais tarde.';
       }
     });

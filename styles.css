@@ -265,74 +265,97 @@ input[type="text"], select {
   text-align: center;
 }
 
-/* Logo */
-.logo-login {
-  height: 120px; /* Aumenta o tamanho da logo */
-  width: auto; /* Mantém a proporção */
-  margin-bottom: 30px; /* Espaçamento abaixo da logo */
+/* Centraliza e fixa a tela de login */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Altura fixa da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden; /* Remove rolagem */
 }
 
-#login-form {
+/* Container do login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
-  padding: 30px; /* Aumenta o espaçamento interno */
-  border-radius: 10px; /* Arredonda mais as bordas */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta o sombreado */
-  width: 350px; /* Aumenta a largura do formulário */
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Logo */
+.logo-login {
+  height: 200px;
+  width: auto;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Formulário */
+#login-form {
+  width: 100%;
 }
 
 #login-form label {
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
-  font-size: 0.9rem; /* Ajusta o tamanho da fonte */
-  color: #333; /* Ajusta a cor do texto */
+  font-size: 0.95rem;
+  color: #444;
 }
 
 #login-form input {
   width: 100%;
-  padding: 12px; /* Aumenta o padding dos inputs */
-  margin-bottom: 20px; /* Aumenta o espaçamento entre os campos */
+  padding: 12px;
+  margin-bottom: 20px;
   border: 1px solid #ddd;
-  border-radius: 6px; /* Mais arredondado */
-  font-size: 0.9rem; /* Ajusta o tamanho do texto */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#login-form input:focus {
+  border-color: #007BFF;
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 #login-form button {
   width: 100%;
-  padding: 12px; /* Aumenta o tamanho do botão */
+  padding: 12px;
   background-color: #007BFF;
   color: white;
   border: none;
-  border-radius: 6px; /* Mais arredondado */
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem; /* Aumenta o tamanho do texto */
+  font-size: 1.1rem;
   font-weight: bold;
-  transition: background-color 0.3s ease-in-out; /* Animação suave */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #login-form button:hover {
-  background-color: #0056b3; /* Cor mais escura no hover */
+  background-color: #0056b3;
+  transform: scale(1.02); /* Efeito de crescimento no hover */
 }
 
 #error-message {
   color: red;
   text-align: center;
   margin-top: 10px;
-  font-size: 0.85rem; /* Ajusta o tamanho do texto */
+  font-size: 0.85rem;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  #login-form {
-    width: 100%; /* Ocupa toda a largura em telas menores */
-    max-width: 400px; /* Limita a largura máxima */
-  }
-
-  .logo-login {
-    height: 100px; /* Reduz o tamanho da logo em telas menores */
-    margin-bottom: 20px; /* Ajusta o espaçamento */
-  }
-}
 
 
 /* Responsividade */
