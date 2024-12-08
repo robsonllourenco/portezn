@@ -59,17 +59,11 @@ header {
   color: white;
 }
 
-
 /* Ajuste do body para compensar o cabeçalho fixo */
 body {
   margin: 0;
-  padding-top: 100px; /* Espaço ajustado para o cabeçalho fixo */
+  padding-top: 100px;
 }
-
-.warning {
-  margin-top: 0px; /* Espaço personalizado abaixo do cabeçalho */
-}
-
 
 /* Aviso em vermelho */
 .warning {
@@ -78,22 +72,22 @@ body {
   border: 1px solid #f5c6cb;
   padding: 15px;
   margin: 30px auto;
-  text-align: left; /* Alinhado à esquerda para parecer mais interativo */
+  text-align: left;
   border-radius: 8px;
-  display: flex; /* Adiciona layout flexível */
-  align-items: center; /* Centraliza conteúdo verticalmente */
-  gap: 10px; /* Espaçamento entre ícone e texto */
-  max-width: 100%; /* Limita a largura para centralizar melhor */
-  animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .warning-icon {
-  font-size: 1.5rem; /* Tamanho do ícone */
+  font-size: 1.5rem;
   color: #721c24;
 }
 
 .warning-text {
-  font-size: 0.95rem; /* Ajuste do tamanho do texto */
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
@@ -108,24 +102,22 @@ body {
   }
 }
 
-
-
 /* Título Principal */
 .form-title {
-  text-align: left; /* Alinha o texto à esquerda */
+  text-align: left;
   margin-bottom: 10px;
-  background-color: #0056b3; /* Fundo azul */
-  color: white; /* Texto branco */
-  padding: 10px; /* Espaçamento interno */
-  border-radius: 5px; /* Bordas levemente arredondadas */
-  width: 1000px; /* Ocupa toda a largura */
+  background-color: #0056b3;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 1000px;
 }
 
 .form-title h3 {
-  font-size: 1.2rem; /* Ajusta o tamanho do texto */
-  font-weight: bold; /* Negrito */
-  margin: 0; /* Remove margem do título */
-  padding-left: 15px; /* Espaçamento interno para alinhamento */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 15px;
 }
 
 /* Abas de Navegação */
@@ -145,7 +137,7 @@ body {
   color: #333;
   font-weight: bold;
   transition: all 0.3s ease;
-  width: 100%; /* Ocupa toda a largura */
+  width: 100%;
 }
 
 .tab.active {
@@ -249,10 +241,10 @@ input[type="text"], select {
 }
 
 .developer-text {
-  text-align: center; /* Centraliza o texto horizontalmente */
-  margin-top: 25px; /* Espaçamento acima da frase */
-  font-size: 0.8rem; /* Ajusta o tamanho do texto */
-  color: #525252; /* Cor do texto */
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.8rem;
+  color: #525252;
 }
 
 /* Tela de Login */
@@ -311,8 +303,6 @@ input[type="text"], select {
   text-align: center;
   margin-top: 10px;
 }
-
-
 
 /* Responsividade */
 @media (max-width: 768px) {
