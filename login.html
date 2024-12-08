@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Login - Zona Norte</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="login-container">
-    <h1>Login</h1>
+    <img src="./logo.png" alt="Logo" class="logo">
+    <h1>Zona Norte - Login</h1>
     <form id="login-form">
       <label for="username">Usuário:</label>
-      <input type="text" id="username" name="username" required>
+      <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
       <label for="password">Senha:</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
       <button type="submit">Entrar</button>
     </form>
     <p id="error-message" style="color: red;"></p>
@@ -21,24 +22,19 @@
 
   <script>
     document.getElementById('login-form').addEventListener('submit', async function (e) {
-      e.preventDefault(); // Impede o comportamento padrão do formulário
+      e.preventDefault();
 
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
       try {
-        // Carregar os dados do JSON
         const response = await fetch('users.json');
         const users = await response.json();
 
-        // Verificar se as credenciais são válidas
         const user = users.find((user) => user.username === username && user.password === password);
 
         if (user) {
-          // Salvar o estado de login no sessionStorage
           sessionStorage.setItem('loggedIn', 'true');
-
-          // Redirecionar para a página index.html
           window.location.href = 'index.html';
         } else {
           document.getElementById('error-message').textContent = 'Usuário ou senha inválidos.';
