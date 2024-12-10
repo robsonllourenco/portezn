@@ -102,3 +102,10 @@ function downloadImage() {
   link.href = tempCanvas.toDataURL('image/png');
   link.click();
 }
+
+// Função de logout
+document.getElementById('logoutButton').addEventListener('click', () => {
+  sessionStorage.removeItem('loggedIn'); // Remove a autenticação
+  sessionStorage.removeItem('userName'); // Remove o nome do usuário
+  window.location.href = 'login.html'; // Redireciona para a página de login
+});
